@@ -1,0 +1,32 @@
+A histone is a little cluster of 8 proteins, which DNA likes to wrap around (probabilistically speaking). The histones provide mechanical strength to the DNA, and protect it from the wider cellular environment. Basically, if you want to get at the DNA, you have to get the histone out of the way first.
+
+Now, histones are proteins, and proteins can be modified after they've been made. For histones specifically, they can be Methylated, Acetylated, Ubiquitinated, Sumolated... and probably a bunch of other modifications (addition or deletion of various chemical groups) that we just don't know about yet.
+
+But a modification, such as methylation for example, isn't a general property of a histone - when we talk about histone modifications we specify exactly which amino acid of the histone has been modified (for example, by the addition of a methyl group).
+
+The notation goes something like "H3K4me1" - for Histone 3, 4th Lysine ("K", don't ask. "L" was already used for Leucine...) from the start of the protein chain, has had a single methyl group added.
+
+H3K4me2 and H3K4me3 also exist, as a single Lysine can be methylated three times. It can only be Acetylated once though, so you never get H3K4ac3.
+
+Anyway, these modifications act like markers for the cell, informing it about how it should treat the DNA under the histone. Covered in H3K9me2? Stay the hell away - this DNA probably codes for Alu transposons, and just opening it up could cause some expression and a bad time. H3K4me3? This DNA probably codes for an active gene, and it would be sweet if you could let PolII to come over here and start making some RNA.
+
+So how does ChIP-Seq work... well, it basically all hinges on the wonders of antibodies. In laymen's terms, if you inject something into a rabbit which doesn't belong there, it'll cause an immune response and generate a ton of antibodies which bind to the thing you injected. This is a wonderful thing. You can then borrow these antibodies from the rabbit, bind them to some metallic beads, then pour in some cellular stuff into a tube with these beads, and that thing you injected into the rabbit will stick to the beads.
+The cool thing about antibodies is that they (can be) awesomely specific. An antibody could recognise a Histone with the K4 tri-methylation modification, but not the di-methylation or mono-methylation modifications.
+So basically, the idea behind Chip-Seq is:
+
+- Take DNA suspended in some sort of liquid.
+- Chemically 'freeze' it with formaldehyde such that everything that was bound STAYS BOUND, because formaldehyde has glued everything up.
+- Cut the DNA up into lots of little fragments (between 200bp and 700bp long, because that's what the sequencers like)
+- Add the DNA and anti-body-bound metal beads to a tube. Mix gently for 10 hours. zzz.
+- Put a magnet next to the tube so all those metallic beads stick to the edge of the tube - pour out the liquid (leaving only the beads with the antibody and the histone modification you were interested in left in the tube).
+- Add some fresh liquid and remove the magnet so the beads go back into suspension.
+- Heat things up for another 10 hours to melt away all that formaldehyde glue crap. Once it's been heated up once it's inert... kinda.
+- Do the magnet/pouring thing again - now you'll pour out a liquid with just DNA that was bound to the histones with the modification of your choice at the time that you added the formaldehyde.
+- Sequence that DNA to find out where those histones were sitting in the genome.
+
+
+But the fun doesn't have to stop there! Anything that binds DNA and can be bound to by an antibody can be ChIP'd! Transcription factors, Polymerases, bigger proteins that build/unassemble histones - whatever you want! If you can inject it, you can detect it.
+
+DISCLAIMER: I don't work with rabbits, please don't send me hate mail - i'm being facetious.
+
+So to recap, when we look at chipseq data for histone modifications, we are looking at reads (ie part of the DNA) that is wrapped around that particular histone. In terms of a linear DNA, we can think of a section of the DNA that is wrapped around the histone.
