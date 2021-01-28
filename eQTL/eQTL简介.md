@@ -30,7 +30,7 @@ GTEx是第一个收集了多个人体器官mRNA测序的数据库，并提供了
 
 当前使用的GTEx v6p版本的原始数据来自于449名生前健康的遗体捐献者的44个不同的器官。图2是不同器官里面样本数的直观展示。由这个图可以看出，这一数据库中涉及的数据覆盖面非常广，数据量大，具有重要的应用潜力。
 
-![img](https:////upload-images.jianshu.io/upload_images/14383547-ec8174dea1afc5fa.JPEG?imageMogr2/auto-orient/strip|imageView2/2/w/589)
+![img](GTEx数据库.jpg)
 
 图2：GTEx 样品取材来源图示。灰色字体为 cis-eQTL 数／trans-eQTL数 （样本
 
@@ -64,7 +64,7 @@ GTEx 为挖掘器官特异的基因组数据提供了一个非常好的平台。
 
 
 
-![img](https:////upload-images.jianshu.io/upload_images/14383547-2f5f31442717bda5.png?imageMogr2/auto-orient/strip|imageView2/2/w/1200)
+![img](eQTL分析方法.jpg)
 
 ------
 
@@ -98,7 +98,7 @@ https://mp.weixin.qq.com/s/X6oiHtKBMBPFqncgL3Enxw
 
 #### 4.可做的各种结合分析：
 
-![img](https:////upload-images.jianshu.io/upload_images/14383547-eff0271ccd941ac2.png?imageMogr2/auto-orient/strip|imageView2/2/w/1200)
+![img](eQTL分析流程.jpg)
 
 
 
