@@ -64,7 +64,7 @@ GTEx 为挖掘器官特异的基因组数据提供了一个非常好的平台。
 
 
 
-![img](eQTL分析方法.jpg)
+![img](eQTL分析方法.png)
 
 ------
 
@@ -98,7 +98,7 @@ https://mp.weixin.qq.com/s/X6oiHtKBMBPFqncgL3Enxw
 
 #### 4.可做的各种结合分析：
 
-![img](eQTL分析流程.jpg)
+![img](eQTL分析流程.png)
 
 
 
